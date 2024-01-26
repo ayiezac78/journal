@@ -1,23 +1,27 @@
 :root {
-  --bg-light-bg: #fffffb;
-  --text-light-color: #fffffb;
-  --border-color: #dfeec3;
-  --hue-color: #dfeec3;
-  --bg-dark-color: #0d100e;
-  --text-dark-color: #0d100e;
-  --secondary-accent-color: #0050cb;
-  --main-accent-color: #009b51;
-  --underline__shade-color: #f3b15c;
+  --bg-light-color: #F1E8DD;
+  --text-color: #DCDCDC;
+  --nav-link-color: #DCDCDC;
+  --border-color: #ff4057;
+  --hue-color: #ff4057;
+  --bg-dark-color: #282634;
+  --text-dark-color: #282634;
+  --secondary-accent-color: #DCDCDC;
+  --main-accent-color: #ff4057;
+  /* --underline__shade-color: #f3b15c; */
   --bg-button-cta: var(--main-accent-color);
-  --btn-text-color: var(--text-light-color);
-  --link-color: var(--main-accent-color);
-  --text-cta-color: var(--main-accent-color);
-  --heading-accent-color: var(--secondary-accent-color);
-  --icon-accent-color: var(--secondary-accent-color);
+  --btn-text-color: var(--text-color);
+  --link-color: var(--text-color);
+  --text-cta-color: var(--text-color);
+  --heading-color: var(--text-color);
+  --heading-accent-color: var(--main-accent-color-color);
+  --icon-accent-color: var(--main-accent-color);
 }
 
 html {
   height: 100%;
+  background-color: var(--bg-dark-color);
+  color: var(--text-color);
 }
 
 h1,
@@ -25,20 +29,24 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: 'Cabin', sans-serif;
+h6,
+.navlinks {
+  font-family: 'Inknut Antiqua', serif;
+  color: var(--heading-color);
 }
 
 p,
 a,
 small,
 ul li {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 body {
   min-height: 100vh;
+  width: 100%;
 }
+
 
 /* .body-container {
   display: grid;
@@ -46,15 +54,15 @@ body {
   min-height: 100vh;
 } */
 
-.light {
+/* .light {
   background-color: var(--bg-light-bg);
   color: var(--text-dark-color);
   transition: background-color 0.3s ease;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .dark {
     background-color: var(--bg-dark-color);
     color: var(--text-light-color);
   }
-}
+} */

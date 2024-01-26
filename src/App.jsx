@@ -6,17 +6,19 @@ import Journal from './pages/Journal/Journal';
 import About from './pages/About/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Gallery from './pages/Gallery/Gallery';
 
 function App() {
 
 
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col container px-10 mx-auto'>
       <Header />
       <main className='flex-1'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='journal' element={<Journal />} />
+          <Route path='gallery' element={<Gallery />} />
           <Route path='about' element={<About />} />
         </Routes>
       </main>
