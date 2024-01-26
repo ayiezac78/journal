@@ -1,8 +1,60 @@
-.dark {
-  background-color: #333;
-  color: #fff;
+:root {
+  --bg-light-bg: #fffffb;
+  --text-light-color: #fffffb;
+  --border-color: #dfeec3;
+  --hue-color: #dfeec3;
+  --bg-dark-color: #0d100e;
+  --text-dark-color: #0d100e;
+  --secondary-accent-color: #0050cb;
+  --main-accent-color: #009b51;
+  --underline__shade-color: #f3b15c;
+  --bg-button-cta: var(--main-accent-color);
+  --btn-text-color: var(--text-light-color);
+  --link-color: var(--main-accent-color);
+  --text-cta-color: var(--main-accent-color);
+  --heading-accent-color: var(--secondary-accent-color);
+  --icon-accent-color: var(--secondary-accent-color);
 }
+
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin', sans-serif;
+}
+
+p,
+a,
+small,
+ul li {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* .body-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+} */
+
 .light {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--bg-light-bg);
+  color: var(--text-dark-color);
+  transition: background-color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background-color: var(--bg-dark-color);
+    color: var(--text-light-color);
+  }
 }
