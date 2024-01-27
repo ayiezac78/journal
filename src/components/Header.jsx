@@ -8,12 +8,12 @@ import MobileNavbar from './MobileNavbar'
 
 const Header = () => {
   return (
-    <div className='flex items-center justify-between py-3'>
+    <header className='flex items-center justify-between py-3 border-b-2 border-b-slate-300'>
       <Logo />
       <Navbar />
       <MobileNavbar />
       {/* <ToggleTheme /> */}
-    </div>
+    </header>
   )
 }
 

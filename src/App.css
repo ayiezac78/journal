@@ -39,6 +39,10 @@ h6 {
   font-family: 'Inknut Antiqua', serif;
 }
 
+.navlinks.active {
+  color: green;
+}
+
 p,
 a,
 small,

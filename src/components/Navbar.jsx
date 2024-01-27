@@ -1,23 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Outlet, } from 'react-router-dom'
 import { links } from '@/js/links'
+import SVG from 'react-inlinesvg'
+
 
 const dataLinks = links.map((link, index) => {
   return (
-    <li key={index} className='flex items-center gap-1'>
-      <box-icon color='#554B3F' name={link.boxIconName}></box-icon>
-      <Link className="navlinks text-sm" to={link.path}>{link.pathname}</Link>
+    <li key={index}>
+      <NavLink className="navlinks text-sm flex items-center gap-1" to={link.path}>
+
+        <SVG src={link.boxIconName} />
+        {link.pathname}
+      </NavLink>
     </li>
   );
 });
 
 const Navbar = () => {
   return (
-    <div className='hidden md:block'>
+    <nav className='hidden md:block'>
       <ul className='flex gap-3'>
         {dataLinks}
       </ul>
-    </div>
+      <Outlet />
+    </nav>
   )
 }
 
