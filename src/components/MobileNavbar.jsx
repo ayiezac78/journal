@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { links } from '@/js/links'
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -15,12 +16,12 @@ import InlineSVG from 'react-inlinesvg'
 
 const dataLinks = links.map((link, index) => {
   return (
-    <span key={index}>
+    <SheetClose asChild key={index}>
       <NavLink className="navlinks text-md flex items-center gap-3 mb-3" to={link.path}>
         <InlineSVG src={link.boxIconName} />
         {link.pathname}
       </NavLink>
-    </span>
+    </SheetClose>
   );
 });
 
@@ -37,6 +38,7 @@ const MobileNavbar = () => {
           <SheetHeader>
             <SheetTitle className='text-start'>Menu</SheetTitle>
             <SheetDescription>
+
               {dataLinks}
             </SheetDescription>
           </SheetHeader>
