@@ -1,26 +1,26 @@
 :root {
   --bg-light-color: #F1E8DD;
-  --text-color: #DCDCDC;
-  --nav-link-color: #DCDCDC;
-  --border-color: #ff4057;
-  --hue-color: #ff4057;
+  --text-color: #554B3F;
+  --nav-link-color: #554B3F;
+  --border-color: #554B3F;
+  --hue-color: #554B3F;
   --bg-dark-color: #282634;
   --text-dark-color: #282634;
-  --secondary-accent-color: #DCDCDC;
-  --main-accent-color: #ff4057;
+  --secondary-accent-color: #554B3F;
+  --main-accent-color: #554B3F;
   /* --underline__shade-color: #f3b15c; */
   --bg-button-cta: var(--main-accent-color);
   --btn-text-color: var(--text-color);
   --link-color: var(--text-color);
   --text-cta-color: var(--text-color);
-  --heading-color: var(--text-color);
+  --heading-color: #97978D;
   --heading-accent-color: var(--main-accent-color-color);
-  --icon-accent-color: var(--main-accent-color);
+  --icon-accent-color: #97978D;
 }
 
 html {
   height: 100%;
-  background-color: var(--bg-dark-color);
+  background-color: var(--bg-light-color);
   color: var(--text-color);
 }
 
@@ -29,10 +29,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.navlinks {
+h6 {
   font-family: 'Inknut Antiqua', serif;
   color: var(--heading-color);
+}
+
+.navlinks {
+  color: var(--nav-link-color);
+  font-family: 'Inknut Antiqua', serif;
 }
 
 p,
@@ -44,7 +48,7 @@ ul li {
 
 body {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 

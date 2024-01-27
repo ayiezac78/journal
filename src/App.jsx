@@ -7,13 +7,16 @@ import About from './pages/About/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery/Gallery';
+import { Separator } from "@/components/ui/separator"
+
 
 function App() {
 
 
   return (
-    <div className='min-h-screen flex flex-col container px-10 mx-auto'>
+    <div className='min-h-screen flex flex-col container px-3 mx-auto'>
       <Header />
+      <Separator />
       <main className='flex-1'>
         <Routes>
           <Route path='/' element={<Home />} />
