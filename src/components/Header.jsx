@@ -10,7 +10,7 @@ import logo from '../assets/images/svg/logo-no-background.svg'
 
 const Header = () => {
   return (
-    <header className='flex items-center justify-between py-3 border-b-2 border-b-slate-300 px-4 sm:px-6 lg:px-10'>
+    <header className='flex items-center justify-between py-3 border-b-2 border-b-slate-300 px-4 sm:px-6 lg:px-10 container'>
       {/* <Logo /> */}
       <Link to='/'>
         {/* <span className='logo'>journallery</span> */}
