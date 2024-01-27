@@ -8,7 +8,6 @@ const dataLinks = links.map((link, index) => {
   return (
     <li key={index}>
       <NavLink className="navlinks text-sm flex items-center gap-1" to={link.path}>
-
         <SVG src={link.boxIconName} />
         {link.pathname}
       </NavLink>
