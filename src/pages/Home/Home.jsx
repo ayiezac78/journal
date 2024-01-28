@@ -14,7 +14,7 @@ const Home = () => {
   })
 
   const orangeSunset = cld.image('images/memories/bike-on-a-sunset');
-  orangeSunset.resize(scale().width(600));
+  orangeSunset.resize(scale().width(500));
   orangeSunset.format('auto').quality('auto')
 
   return (
@@ -42,7 +42,7 @@ const Home = () => {
                   placeholder({ mode: 'predominant' })
                 ]
               }
-            ></AdvancedImage>
+            />
           </div>
         </div>
       </section>

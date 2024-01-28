@@ -17,7 +17,7 @@ import InlineSVG from 'react-inlinesvg'
 const dataLinks = links.map((link, index) => {
   return (
     <SheetClose asChild key={index}>
-      <NavLink className="navlinks text-md flex items-center gap-3 mb-3" to={link.path}>
+      <NavLink className="navlinks text-lg flex items-center gap-3 mb-3" to={link.path}>
         <InlineSVG src={link.boxIconName} />
         {link.pathname}
       </NavLink>
@@ -36,7 +36,7 @@ const MobileNavbar = () => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle className='text-start'>Menu</SheetTitle>
+            <SheetTitle className='text-start text-3xl'>Menu</SheetTitle>
             <SheetDescription>
 
               {dataLinks}
