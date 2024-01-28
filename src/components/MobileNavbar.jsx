@@ -38,7 +38,6 @@ const MobileNavbar = () => {
           <SheetHeader>
             <SheetTitle className='text-start text-3xl'>Menu</SheetTitle>
             <SheetDescription>
-
               {dataLinks}
             </SheetDescription>
           </SheetHeader>

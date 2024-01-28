@@ -1,29 +1,18 @@
-import React, { useEffect } from 'react'
-import { Cloudinary } from '@cloudinary/url-gen'
-import { AdvancedImage, lazyload, responsive, placeholder, accessibility } from '@cloudinary/react';
-import { scale } from "@cloudinary/url-gen/actions/resize";
+import React, { useEffect, useState } from 'react'
 import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
+import { Image } from '@unpic/react';
+import { blurhashToCssGradientString } from '@unpic/placeholder';
 const Home = () => {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'dkar2rexr'
-    }
-  })
-
-  const orangeSunset = cld.image('images/memories/bike-on-a-sunset');
-  orangeSunset.resize(scale().width(500));
-  orangeSunset.format('auto').quality('auto')
-
+  const blurPlaceholder = blurhashToCssGradientString('LoGbbZE3kBae~pIpayjbx]V@affl')
   return (
     <div>
       <section>
         <div className='flex py-10 flex-col md:flex-col lg:flex-row gap-4'>
           <div className='flex items-center'>
             <div>
-              <h1 className='text-3xl'>"Unraveling the layers of my thoughts, dreams, and the raw essence of my existence."</h1>
+              <h1 className='text-3xl'>"Unraveling the layers of my thoughts, dreams, and the raw essence of my existence"</h1>
               <div className='mt-4 flex justify-start md:justify-center lg:justify-start'>
                 <Button variant='outline' className='bg-transparent border-2 border-[#97978D] rounded-full px-10' asChild>
                   <Link to='/about'>About</Link>
@@ -31,18 +20,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='w-fit md:w-full lg:w-full flex justify-center'>
-            <AdvancedImage
-              className=' rounded-md grayscale hover:grayscale-0 transition-all'
-              cldImg={orangeSunset}
-              plugins={
-                [
-                  lazyload(),
-                  responsive(),
-                  placeholder({ mode: 'predominant' })
-                ]
-              }
-            />
+          <div className='flex justify-center'>
+            <Image className='rounded-md' src="https://res.cloudinary.com/dkar2rexr/image/upload/v1706416149/images/memories/bike-on-a-sunset.webp" background={blurPlaceholder} layout='constrained' width={800} height={600} />
           </div>
         </div>
       </section>
@@ -60,6 +39,12 @@ const Home = () => {
               <Link to='/journal'>See More</Link>
             </Button>
           </div>
+        </div>
+      </section>
+      <Separator />
+      <section>
+        <div className='py-10'>
+          <h2 className='text-2xl'>Recent Uploads</h2>
         </div>
       </section>
     </div>
