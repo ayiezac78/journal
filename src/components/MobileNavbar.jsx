@@ -35,7 +35,7 @@ const MobileNavbar = () => {
           </svg>
         </SheetTrigger>
         <SheetContent>
-          <SheetHeader>
+          <SheetHeader className='gap-4'>
             <SheetTitle className='text-start text-3xl'>Menu</SheetTitle>
             <SheetDescription>
               {dataLinks}

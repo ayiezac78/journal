@@ -14,7 +14,7 @@ function App() {
   return (
     <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className='flex-1 container mt-10'>
+      <main className='flex-1 container my-10'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='journal' element={<Journal />} />

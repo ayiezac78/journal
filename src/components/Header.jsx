@@ -29,7 +29,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <header style={{ top: isNavVisible ? 0 : -100, transition: 'top 0.3s' }} className={`flex items-center justify-between py-3 px-4 sm:px-6 lg:px-10 fixed top-0 w-full bg-transparent bg-[#F1E8DD]`}>
+    <header style={{ top: isNavVisible ? 0 : -100, transition: 'top 0.3s' }} className={`flex items-center justify-between py-3 px-4 sm:px-6 lg:px-10 fixed top-0 w-full bg-[#F1E8DD]`}>
       <Link to='/'>
         <InlineSVG src={logo} />
       </Link>
