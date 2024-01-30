@@ -5,18 +5,6 @@ import { images } from '../../js/imgData'
 import { blurhashToCssGradientString } from '@unpic/placeholder';
 import { Separator } from '@/components/ui/separator';
 
-function getImageUrl(name, imgType) {
-  const validImageTypes = ['jpeg', 'jpg', 'png', 'gif', 'webp', 'avif'];
-
-  if (!validImageTypes.includes(imgType)) {
-    throw new Error('Invalid image type');
-  }
-
-  const baseUrl = '../../assets/images/pics/';
-
-  return new URL(`${baseUrl}${name}.${imgType}`, import.meta.url).href;
-}
-
 function blurHashPlaceholder(hashString) {
   return blurhashToCssGradientString(hashString);
 }
@@ -36,8 +24,8 @@ const Gallery = () => {
           }}>
           {
             images.nov_18_2021.img.map((imgs, index) => (
-              <a data-fancybox="gallery" key={index} href={getImageUrl(`${imgs.filename}`, `${imgs.imageType}`)}>
-                <Image className='aspect-video rounded-lg' layout='fullWidth' src={getImageUrl(`${imgs.filename}`, `${imgs.imageType}`)} background={blurHashPlaceholder(`${imgs.hashString}`)} />
+              <a data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
+                <Image className='aspect-video rounded-lg' layout='fullWidth' src={`${imgs.imgUrl}`} background={blurHashPlaceholder(`${imgs.hashString}`)} />
               </a>
             ))
           }
