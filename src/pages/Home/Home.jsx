@@ -13,9 +13,12 @@ const Home = () => {
           <div className='flex items-center'>
             <div>
               <h1 className='text-3xl'>"Unraveling the layers of my thoughts, dreams, and the raw essence of my existence"</h1>
-              <div className='mt-4 flex justify-start md:justify-start lg:justify-start'>
+              <div className='mt-4 flex justify-center md:justify-start lg:justify-start gap-3'>
                 <Button variant='outline' className='bg-transparent border-2 border-[#97978D] rounded-full px-10' asChild>
                   <Link to='/about'>About</Link>
+                </Button>
+                <Button variant='outline' className='bg-[#97978D] text-slate-50 border-2 border-[#97978D] rounded-full px-10' asChild>
+                  <Link to='/gallery'>Gallery</Link>
                 </Button>
               </div>
             </div>
@@ -42,11 +45,11 @@ const Home = () => {
         </div>
       </section>
       <Separator />
-      <section>
+      {/* <section>
         <div className='py-10'>
           <h2 className='text-2xl'>Recent Uploads</h2>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

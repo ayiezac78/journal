@@ -18,14 +18,17 @@ const Gallery = () => {
         <Separator className='my-4' />
         <Fancybox
           options={{
+            Images: {
+              protected: true
+            },
             Carousel: {
               infinite: false
             }
           }}>
           {
             images.nov_18_2021.img.map((imgs, index) => (
-              <a data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
-                <Image className='aspect-video rounded-lg' layout='fullWidth' src={`${imgs.imgUrl}`} background={blurHashPlaceholder(`${imgs.hashString}`)} />
+              <a className='rounded-sm' data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
+                <Image className='rounded mb-4' layout='fullWidth' src={`${imgs.imgUrl}`} background={blurHashPlaceholder(`${imgs.hashString}`)} />
               </a>
             ))
           }
