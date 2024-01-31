@@ -20,9 +20,11 @@ function Fancybox(props) {
     };
   });
 
-  return <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4 p-4" ref={containerRef}>
-    {props.children}
-  </div>;
+  return (
+    <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4 p-4" ref={containerRef}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Fancybox;

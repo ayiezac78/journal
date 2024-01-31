@@ -45,4 +45,26 @@ export const images = {
       },
     ],
   },
+  // 'dec_18_2021':
+  // {
+  //   dateTaken: 'December 18, 2021',
+  //   img: [
+  //     {
+  //       imgUrl: 'https://res.cloudinary.com/dkar2rexr/image/upload/v1706605898/images/memories/dec182021/e462tus7rpwi9u5qni3f.jpg',
+  //       hashString: 'LgH2TA-:0KM{~qxuD%Rixut6oJR*',
+  //     },
+  //     {
+  //       imgUrl: 'https://res.cloudinary.com/dkar2rexr/image/upload/v1706605898/images/memories/dec182021/wfry7exu0l18clgzexpu.jpg',
+  //       hashString: 'LjF~1{tRM|Rk~Vt7RjWBXTofjZjs',
+  //     },
+  //     {
+  //       imgUrl: 'https://res.cloudinary.com/dkar2rexr/image/upload/v1706605897/images/memories/dec182021/qdy9qymeowik3ajiblnb.jpg',
+  //       hashString: 'LpGIARxuNHRk~Vt7R*WBtRofjZjZ',
+  //     },
+  //     {
+  //       imgUrl: 'https://res.cloudinary.com/dkar2rexr/image/upload/v1706605897/images/memories/dec182021/dkirw5xvfwagrhqteq5h.jpg',
+  //       hashString: 'LcF=]mx]R%NH~p%MWBRjJ;xtoMfR',
+  //     },
+  //   ],
+  // },
 };

@@ -4,6 +4,7 @@ import React from 'react'
 import { images } from '../../js/imgData'
 import { blurhashToCssGradientString } from '@unpic/placeholder';
 import { Separator } from '@/components/ui/separator';
+import ImageColorDominant from '@/components/ImageColorDominant';
 
 function blurHashPlaceholder(hashString) {
   return blurhashToCssGradientString(hashString);
@@ -28,7 +29,7 @@ const Gallery = () => {
           {
             images.nov_18_2021.img.map((imgs, index) => (
               <a className='rounded-sm' data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
-                <Image className='rounded mb-4' layout='fullWidth' src={`${imgs.imgUrl}`} background={blurHashPlaceholder(`${imgs.hashString}`)} />
+                <ImageColorDominant layout="fullWidth" imgSrc={imgs.imgUrl} />
               </a>
             ))
           }

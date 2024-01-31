@@ -26,6 +26,8 @@
     "boxicons": "^2.1.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "color-thief-react": "^2.1.0",
+    "colorthief": "^2.4.0",
     "lucide-react": "^0.316.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

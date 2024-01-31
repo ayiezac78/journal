@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Image } from '@unpic/react';
-import { blurhashToCssGradientString } from '@unpic/placeholder';
+import ImageColorDominant from '@/components/ImageColorDominant';
+
 const Home = () => {
-  const blurPlaceholder = blurhashToCssGradientString('LoGbbZE3kBae~pIpayjbx]V@affl')
   return (
     <>
       <section>
@@ -24,7 +22,7 @@ const Home = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <Image className='rounded-md' src="https://res.cloudinary.com/dkar2rexr/image/upload/v1706416149/images/memories/bike-on-a-sunset.webp" background={blurPlaceholder} layout='constrained' width={800} height={600} />
+            <ImageColorDominant layout="constrained" width={800} height={600} imgSrc="https://res.cloudinary.com/dkar2rexr/image/upload/v1706416149/images/memories/bike-on-a-sunset.webp" />
           </div>
         </div>
       </section>
@@ -44,12 +42,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Separator />
-      {/* <section>
-        <div className='py-10'>
-          <h2 className='text-2xl'>Recent Uploads</h2>
-        </div>
-      </section> */}
     </>
   )
 }
