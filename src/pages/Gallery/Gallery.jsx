@@ -14,6 +14,27 @@ const Gallery = () => {
   return (
     <div>
       <h1 className='py-10 text-4xl'>Gallery</h1>
+      <section className='mb-5'>
+        <p className='font-semibold'>{images.dec_18_2021.dateTaken}</p>
+        <Separator className='my-4' />
+        <Fancybox
+          options={{
+            Images: {
+              protected: true
+            },
+            Carousel: {
+              infinite: false
+            }
+          }}>
+          {
+            images.dec_18_2021.img.map((imgs, index) => (
+              <a data-caption={imgs.caption} className='rounded-sm' data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
+                <ImageColorDominant blurhash={imgs.hashString} src={imgs.imgUrl} />
+              </a>
+            ))
+          }
+        </Fancybox>
+      </section>
       <section>
         <p className='font-semibold'>{images.nov_18_2021.dateTaken}</p>
         <Separator className='my-4' />
@@ -28,8 +49,8 @@ const Gallery = () => {
           }}>
           {
             images.nov_18_2021.img.map((imgs, index) => (
-              <a className='rounded-sm' data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
-                <ImageColorDominant layout="fullWidth" imgSrc={imgs.imgUrl} />
+              <a data-caption={imgs.caption} className='rounded-sm' data-fancybox="gallery" key={index} href={`${imgs.imgUrl}`}>
+                <ImageColorDominant blurhash={imgs.hashString} src={imgs.imgUrl} />
               </a>
             ))
           }

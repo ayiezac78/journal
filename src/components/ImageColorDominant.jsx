@@ -1,28 +1,7 @@
-import React from "react";
-import Color from "color-thief-react";
+import { blurhashToCssGradientString } from "@unpic/placeholder";
 import { Image } from "@unpic/react";
 
-export default function ImageColorDominant({ imgSrc, alt, layout, width, height }) {
-
-  return (
-    <>
-      <Color src={imgSrc} crossOrigin="anonymous" format="hex">
-        {({ data, loading }) => {
-          const containerStyle = {
-            backgroundColor: loading ? data : data,
-          };
-
-          return (
-            <div className="rounded mb-4" style={containerStyle}>
-              {loading ? (
-                <div className="rounded" style={containerStyle}></div>
-              ) : (
-                <Image className="rounded" layout={layout} src={imgSrc} alt={alt} width={width} height={height} />
-              )}
-            </div>
-          );
-        }}
-      </Color>
-    </>
-  );
+export default function ImageColorDominant({ src, alt, blurhash }) {
+  const placeholder = blurhashToCssGradientString(blurhash);
+  return <Image className="rounded h-auto max-w-full" layout="constrained" width={800} height={600} src={src} alt={alt} background={placeholder} />;
 }

@@ -22,7 +22,7 @@ const Home = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <ImageColorDominant layout="constrained" width={800} height={600} imgSrc="https://res.cloudinary.com/dkar2rexr/image/upload/v1706416149/images/memories/bike-on-a-sunset.webp" />
+            <ImageColorDominant blurhash="LoGbbZE3kBae~pIpayjbx]V@affl" src="https://res.cloudinary.com/dkar2rexr/image/upload/v1706416149/images/memories/bike-on-a-sunset.webp" />
           </div>
         </div>
       </section>
