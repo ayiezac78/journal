@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
 
           <p className="mt-4 text-center text-sm text-slate-50 lg:mt-0 lg:text-right">
-            Copyright &copy; {new Date().getFullYear()} . All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} . code & designed by <a href="https://ayezac.netlify.app/">@yie</a>.
           </p>
         </div>
       </div>

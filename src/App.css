@@ -31,24 +31,25 @@ h4,
 h5,
 h6,
 .logo {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Forum", serif;
   color: var(--heading-color);
 }
 
 .navlinks {
   color: var(--nav-link-color);
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .navlinks.active {
   color: #97978D;
+  font-weight: 500;
 }
 
 p,
 a,
 small,
 ul li {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 body {
